@@ -20,9 +20,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tasks/', include('tasks.urls')),  # Web pages (if needed in the future)
-    path('api/', include('api.urls')),  # API endpoints
+    path('api/', include('api.urls')),  # API for authentication (register, login, logout)
+    path('tasks/', include('tasks.urls')),  # API for task management
 ]
+
 
 
 

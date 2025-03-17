@@ -1,7 +1,8 @@
 from django.urls import path
-from tasks.views import get_tasks, task_detail
+from .views import register_user, login_user, logout_user  # Import authentication views
 
 urlpatterns = [
-    path('tasks/', get_tasks, name='api_get_tasks'),
-    path('tasks/<int:task_id>/', task_detail, name='api_task_detail'),
+    path('register/', register_user, name='register_user'),  # API for User Registration
+    path('login/', login_user, name='login_user'),  # API for Login
+    path('logout/', logout_user, name='logout_user'),  # API for Logout
 ]
